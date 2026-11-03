@@ -1,0 +1,12 @@
+k = 5.67 * 10**-8
+T=input('Masukkan nilai suhu:')
+benda_hitam = k * T**4
+print(benda_hitam)
+
+import math
+c = 3 * 10**8
+v = input('Masukkan nilai kecepatan')
+relativitas = 1/math.sqrt(1-(v**2)/(c**2))
+to = input ('masukkan nilai waktu normal')
+t=to/relativitas
+print(t;'hasil waktu relativitas')
