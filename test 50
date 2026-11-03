@@ -6,4 +6,7 @@ print(benda_hitam)
 import math
 c = 3 * 10**8
 v = input('Masukkan nilai kecepatan')
-relativitas_waktu(t) = 1/math.sqrt(1-(v**2)/(c**2))
+relativitas = 1/math.sqrt(1-(v**2)/(c**2))
+to = input ('masukkan nilai waktu normal')
+t=to/relativitas
+print(t;'hasil waktu relativitas')
