@@ -1,1 +1,16 @@
+import numpy as np
+import matplotlib.pyplot as plt
 
+# Parameter Grid 2D
+N = 128
+L = 1.0
+x = np.linspace(0, L, N, endpoint=False)
+y = np.linspace(0, L, N, endpoint=False)
+X, Y = np.meshgrid(x, y)
+
+# Profil Kecepatan Awal (Shear Layer) & Perturbasi Sinusoidal
+u_x = np.tanh((Y - 0.5) / 0.05)  # Lapisan geser U(y)
+u_y = 0.05 * np.sin(2 * np.pi * X / L) * np.exp(-((Y - 0.5) / 0.1)**2) # Gangguan awal
+
+# Menghitung Vortisitas Awal (Vorticity: w = dv/dx - du/dy)
+# Simulasi dapat dilanjutkan menggunakan solver Navier-Stokes 2D / Pseudo-spectral
